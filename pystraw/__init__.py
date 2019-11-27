@@ -1,5 +1,5 @@
 """
-Python Strimzi-Bridge API Wrapper.
+Python Strimzi-Bridge API Wrapper
 PYSTRAW, an acronym for "Python Strimzi-Bridge API Wrapper", is a python package that
 allows for simple access to Kafka Strimzi-Bridge's API.
 
