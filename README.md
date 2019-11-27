@@ -14,9 +14,9 @@ bridge = StrimziBridge("localhost", 8080)
 Now you can interact with Kafka via the bridge. 
 
 ```python
-# Create a new consumer
-bridge.create_consumer("group_name",
-                       name="consumer_name",
+# Create a new consumer. Except group_name, all other parameters are optional
+bridge.create_consumer(group_name="group_name",
+                       consumer_name="consumer_name",
                        format="json",
                        auto_offset_reset="earliest",
                        enable_auto_commit="true",
