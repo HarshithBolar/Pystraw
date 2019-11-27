@@ -14,7 +14,7 @@ bridge = StrimziBridge("localhost", 8080)
 Now you can interact with Kafka via the bridge. 
 
 ```python
-# Create a new consumer.
+# Create a new consumer
 bridge.create_consumer("group_name",
                        name="consumer_name",
                        format="json",
@@ -23,4 +23,10 @@ bridge.create_consumer("group_name",
                        fetch_min_bytes=512,
                        consumer_request_timeout_ms=5000
                        )
+                 
+# Subsribe to a list of topics
+bridge.subscribe("group_name", 
+                 "consumer_name", 
+                 topics=["test1", "test2"]
+                 )
 ```
